@@ -15,13 +15,13 @@ The framework uses a configuration-driven approach, allowing users to customize 
 ## Project Structure
 
 ```text
-Spark\_Job\_Performance\_Engine/
+Spark_Job_Performance_Engine/
 ├── config/
 │   └── config.json
 ├── src/
-│   └── tuning\_engine.py
+│   └── tuning_engine.py
 ├── notebooks/
-│   └── Spark\_Job\_Performance.py
+│   └── Spark_Job_Performance.py
 └── README.md
 ```
 

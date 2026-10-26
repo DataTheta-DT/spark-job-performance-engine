@@ -1,0 +1,44 @@
+{
+  "project_name": "Spark_Job_Performance_Tuning",
+  "demo": {
+    "fact_rows": 200000,
+    "dimension_rows": 1000
+  },
+  "input": {
+    "mode": "demo",
+    "format": "parquet",
+    "fact_path": "",
+    "dimension_path": "",
+    "header": true,
+    "infer_schema": true
+  },
+  "join": {
+    "key": "product_id",
+    "type": "inner"
+  },
+  "aggregation": {
+    "group_by": ["category"],
+    "sum_columns": ["sales_amount", "quantity"],
+    "count_rows": true
+  },
+  "filters": {
+    "fact": [],
+    "dimension": []
+  },
+  "optimization": {
+    "broadcast_join": true,
+    "repartition_enabled": true,
+    "shuffle_partitions": 8
+  },
+  "benchmark": {
+    "repeats": 3,
+    "candidates": ["baseline", "broadcast", "repartition", "configured"]
+  },
+  "output": {
+    "save_result": true,
+    "format": "delta",
+    "mode": "overwrite",
+    "table": "default.spark_job_performance_tuning_output",
+    "path": ""
+  }
+}

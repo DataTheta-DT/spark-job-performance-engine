@@ -53,7 +53,7 @@ Update `config/config.json` to customize:
 1. Upload the complete project folder to your Databricks workspace.
 2. Keep the `config`, `src`, and `notebooks` folders together.
 3. Update `config/config.json` according to your requirements.
-4. Open `notebooks/Spark\_Job\_Performance.py`.
+4. Open `notebooks/Spark_Job_Performance.py`.
 5. Run all cells using **Run All**.
 6. Review the benchmark results, validation status, fastest strategy, and execution plan hints.
 
